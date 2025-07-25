@@ -44,12 +44,26 @@ export default function App() {
       </header>
 
       <main className="flex flex-col items-center mt-20 px-4">
-        <iframe
-          src="https://chatgpt.com/g/g-687d074ea6ac8191a3e15cc7c3465fb3-spondysupport"
-          title="SpondySupport Chatbot"
-          className="w-full max-w-2xl h-[600px] border rounded-xl shadow-md"
-          allow="clipboard-write"
-        ></iframe>
+      {/* Replace the iframe with a link/button */}
+      <div className="w-full max-w-2xl p-8 border rounded-xl shadow-md text-center bg-gray-50">
+      <h2 className="text-2xl font-bold mb-4">Chat with SpondySupport AI</h2>
+      <p className="mb-6 text-gray-600">
+      Get personalized advice and answers to your questions about Ankylosing Spondylitis.
+      </p>
+      <a
+      href="https://chatgpt.com/g/g-687d074ea6ac8191a3e15cc7c3465fb3-spondysupport"
+      target="_blank" // Opens the link in a new tab
+      rel="noopener noreferrer"
+      className="inline-block bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition"
+      title="SpondySupport Chatbot"
+    >
+      Open Chat
+    </a>
+  </div>
+
+  <section id="resources" className="mt-16 w-full max-w-4xl">
+  {/* ... rest of the section */}
+</main>
 
         <section id="resources" className="mt-16 w-full max-w-4xl">
           <h2 className="text-xl font-semibold mb-4">Featured Resources</h2>
