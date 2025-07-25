@@ -1,0 +1,85 @@
+import React from "react";
+
+const resources = [
+  {
+    type: "article",
+    title: "How to Prevent Pain and Long‑Term Damage From Ankylosing Spondylitis",
+    url: "https://www.verywellhealth.com/ankylosing-spondylitis-prevention-6827129",
+  },
+  {
+    type: "article",
+    title: "What Is Ankylosing Spondylitis (AS)?",
+    url: "https://www.health.com/ankylosing-spondylitis-overview-7099547",
+  },
+  {
+    type: "article",
+    title: "What Are Your Treatment Options for Ankylosing Spondylitis?",
+    url: "https://www.health.com/ankylosing-spondylitis-treatment-7098969",
+  },
+  {
+    type: "video",
+    title: "Morning Mobility Routine for AS",
+    url: "https://www.youtube.com/embed/Dso5p9RoyWM",
+  },
+  {
+    type: "video",
+    title: "Beginner Stretch for Ankylosing Spondylitis",
+    url: "https://www.youtube.com/embed/c0iOhl1Hqdo",
+  },
+  {
+    type: "video",
+    title: "Exercise Tips for AS Patients",
+    url: "https://www.youtube.com/embed/5oBw3frF9m0",
+  },
+];
+
+export default function App() {
+  return (
+    <div className="min-h-screen bg-white text-gray-900 font-sans">
+      <header className="flex justify-between items-center p-4 border-b shadow-sm">
+        <h1 className="text-2xl font-bold">SpondySupport</h1>
+        <a href="#resources" className="text-blue-600 hover:underline font-medium">
+          Resources
+        </a>
+      </header>
+
+      <main className="flex flex-col items-center mt-20 px-4">
+        <iframe
+          src="https://chatgpt.com/g/g-687d074ea6ac8191a3e15cc7c3465fb3-spondysupport"
+          title="SpondySupport Chatbot"
+          className="w-full max-w-2xl h-[600px] border rounded-xl shadow-md"
+          allow="clipboard-write"
+        ></iframe>
+
+        <section id="resources" className="mt-16 w-full max-w-4xl">
+          <h2 className="text-xl font-semibold mb-4">Featured Resources</h2>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {resources.map((res, i) => (
+              <div key={i} className="border p-4 rounded-lg shadow-sm hover:shadow-md transition">
+                {res.type === "video" ? (
+                  <div className="aspect-video">
+                    <iframe
+                      src={res.url}
+                      title={res.title}
+                      className="w-full h-full rounded"
+                      allowFullScreen
+                    ></iframe>
+                  </div>
+                ) : (
+                  <a
+                    href={res.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-blue-600 hover:underline"
+                  >
+                    {res.title}
+                  </a>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+}
