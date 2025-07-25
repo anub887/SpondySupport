@@ -19,17 +19,17 @@ const resources = [
   {
     type: "video",
     title: "Morning Mobility Routine for AS",
-    url: "https://www.youtube.com/embed/Dso5p9RoyWM",
+    url: "https://www.youtube.com/embed/Dso5p9RoyWM?si=jU8zIbB_e9IS6J2K",
   },
   {
     type: "video",
     title: "Beginner Stretch for Ankylosing Spondylitis",
-    url: "https://www.youtube.com/embed/c0iOhl1Hqdo",
+    url: "https://www.youtube.com/embed/c0iOhl1Hqdo?si=2rRx30-gSKbTtzOK",
   },
   {
     type: "video",
     title: "Exercise Tips for AS Patients",
-    url: "https://www.youtube.com/embed/5oBw3frF9m0",
+    url: "https://www.youtube.com/embed/5oBw3frF9m0?si=JEv90IeKzq8CeyLT",
   },
 ];
 
@@ -60,11 +60,6 @@ export default function App() {
       Open Chat
     </a>
   </div>
-
-  <section id="resources" className="mt-16 w-full max-w-4xl">
-  {/* ... rest of the section */}
-</main>
-
         <section id="resources" className="mt-16 w-full max-w-4xl">
           <h2 className="text-xl font-semibold mb-4">Featured Resources</h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
